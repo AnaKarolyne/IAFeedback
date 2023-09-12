@@ -16,6 +16,9 @@ A IA VozDoCliente é um projeto de inteligência artificial que permite coletar 
 3. Instale as extensões necessárias dentro do terminal.
 4. Execute o programa.
 
+## Link no Youtube
+https://youtu.be/n8Bu3IgNMJo
+
 ## Autores
 | Nome               | RM     |
 | ------------------ | ------ |
