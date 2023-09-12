@@ -4,7 +4,7 @@ A IA VozDoCliente é um projeto de inteligência artificial que permite coletar 
 
 ## Funcionalidades
 
-- Coleta de feedback por voz ou texto.
+- Coleta de feedback por texto.
 - Armazenamento dos feedbacks em uma planilha Excel.
 - Visualização dos feedbacks coletados.
 - Interface de voz para interagir com os usuários.
