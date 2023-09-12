@@ -15,3 +15,12 @@ A IA VozDoCliente é um projeto de inteligência artificial que permite coletar 
 2. Clone o repositório para o seu ambiente local, e abra o arquivo dentro do PyCharm.
 3. Instale as extensões necessárias dentro do terminal.
 4. Execute o programa.
+
+## Autores
+| Nome               | RM     |
+| ------------------ | ------ |
+| Ana Karolyne       | RM93668    |
+| Alan Araujo        | RM95355    |
+| Iago Coelho        | RM95683    |
+| João Marcelo       | RM94983    |
+| Valentina Fuzaro   | RM95741    |
