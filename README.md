@@ -20,8 +20,8 @@ Essa ferramenta foi desenvolvida para ajudar a melhorar a usabilidade e qualidad
 
 ## Link no Youtube
 
-Feedback com perguntas fixas (3° Entrega - Chellenge): https://youtu.be/n8Bu3IgNMJo
-Feedback com perguntas dinâmicas (4° Entrega - Chellenge): https://youtu.be/n8Bu3IgNMJo
+- Feedback com perguntas fixas (3° Entrega - Chellenge): https://youtu.be/n8Bu3IgNMJo
+- Feedback com perguntas dinâmicas (4° Entrega - Chellenge): https://youtu.be/n8Bu3IgNMJo
 
 ## Link no Figma (Exemplo)
 
