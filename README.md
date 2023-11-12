@@ -33,6 +33,7 @@ Essa ferramenta foi desenvolvida para ajudar a melhorar a usabilidade e qualidad
 - [https://youtu.be/n8Bu3IgNMJo](https://www.figma.com/proto/sXI1z7hYD8wOWZABtjsKzA/E-Sa%C3%BAde-Website?type=design&node-id=121-534&t=cLBc51oHm8uUyLl4-0&scaling=min-zoom&page-id=0%3A1)
 
 
+
 ## Idéias para o futuro
 - Oferecer a capacidade de coletar feedback por meio de diferentes canais, como aplicativos móveis, formulários online, sites do cliente e etc...
 - Adicionar suporte a vários idiomas para garantir que a ferramenta seja acessível a empresas com colaboradores que falam diferentes idiomas.
