@@ -21,19 +21,15 @@ Essa ferramenta foi desenvolvida para ajudar a melhorar a usabilidade e qualidad
 4. Execute o programa.
 
 
-## Link no Youtube
-
+## Links
+### Youtube
 - Feedback com perguntas fixas (3° Entrega - Chellenge): https://youtu.be/n8Bu3IgNMJo
 - Feedback com perguntas dinâmicas (4° Entrega - Chellenge): https://youtu.be/n8Bu3IgNMJo
 
-
-## Link do arquivo da Arquitetura 
-
+### Arquivo da Arquitetura 
 - https://github.com/AnaKarolyne/IAFeedback/blob/main/ProjectFeedback/ArquiteturaIAFeedback.pdf
 
-
-## Link no Figma (Exemplo)
-
+### Figma (Exemplo)
 - [https://youtu.be/n8Bu3IgNMJo](https://www.figma.com/proto/sXI1z7hYD8wOWZABtjsKzA/E-Sa%C3%BAde-Website?type=design&node-id=121-534&t=cLBc51oHm8uUyLl4-0&scaling=min-zoom&page-id=0%3A1)
 
 
