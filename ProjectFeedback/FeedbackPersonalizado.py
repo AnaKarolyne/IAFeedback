@@ -13,22 +13,20 @@ arquivo_config = "perguntas_categorias_personalizadas.xlsx"
 
 def maquina_fala(fala):
     print(fala)
-    engine.say(fala)
-    engine.runAndWait()
 
 def unknown_value():
     erro = "Não foi possível entender a sua fala. Tente novamente."
     maquina_fala(erro)
     return
 
-def request_error():
+def request_error(e):
     erro = "Ocorreu um erro na API de reconhecimento de fala: {e}"
     maquina_fala(erro)
     return
 
 def mostrar_feedbacks():
     # Nome do arquivo Excel a ser lido
-    arquivo_excel = "feedbacks_personalizados"
+    arquivo_excel = "feedbacks_personalizados.xlsx"
 
     try:
         workbook = openpyxl.load_workbook(arquivo_excel)
@@ -37,7 +35,7 @@ def mostrar_feedbacks():
         maquina_fala(erro)
         return
 
-    # Abre a planilha padrão (Sheet1)
+    # Abre a planilha padrão (Sheet)
     sheet = workbook.active
 
     # Verifica se a planilha não está vazia
@@ -83,6 +81,7 @@ def definir_categorias_perguntas(arquivo_config):
                 break
             perguntas.append(pergunta)
 
+        # Adiciona as perguntas à categoria no dicionário
         categorias_perguntas[categoria] = perguntas
 
     # Adiciona as novas categorias e perguntas ao arquivo Excel
@@ -92,6 +91,7 @@ def definir_categorias_perguntas(arquivo_config):
 
     workbook.save(arquivo_config)
     workbook.close()
+    print(f"O arquivo '{arquivo_config}' foi criado com sucesso.")
 
 def ler_categorias_perguntas(arquivo_config):
     categorias_perguntas = {}
@@ -111,6 +111,7 @@ def ler_categorias_perguntas(arquivo_config):
 def feedback_principal():
     nome_cliente = input("Qual é o seu nome? ")
     nome_produto = input(f"Qual é o nome do produto que você vai avaliar {nome_cliente}? ")
+    arquivo_config = "perguntas_categorias_personalizadas.xlsx"
     coletar_feedback(nome_cliente, nome_produto, arquivo_config)
 
 # Função para coletar feedback e armazená-lo no arquivo Excel
@@ -139,7 +140,7 @@ def coletar_feedback(nome_cliente, nome_produto, arquivo_config):
         coletar_feedback()
 
     except sr.RequestError as e:
-        request_error()
+        request_error(e)
         coletar_feedback()
 
 def salvar_feedback(nome_cliente, nome_produto, respostas, arquivo_config):
@@ -181,7 +182,7 @@ def salvar_feedback(nome_cliente, nome_produto, respostas, arquivo_config):
             # Feche o arquivo (não é estritamente necessário, mas é uma boa prática)
             workbook.close()
 
-            print(f"O arquivo feedbacks.xlsx foi criado com sucesso.")
+            print(f"O arquivo '{nome_arquivo}' foi criado com sucesso.")
 
         except FileNotFoundError:
             workbook = Workbook()
@@ -190,10 +191,10 @@ def salvar_feedback(nome_cliente, nome_produto, respostas, arquivo_config):
     workbook = openpyxl.load_workbook(nome_arquivo)
 
     # Selecione a planilha existente ou crie uma nova, se necessário
-    if "Feedback" in workbook.sheetnames:
-        sheet = workbook["Feedback"]
+    if "Sheet" in workbook.sheetnames:
+        sheet = workbook["Sheet"]
     else:
-        sheet = workbook.create_sheet("Feedback")
+        sheet = workbook.create_sheet("Sheet")
 
     # Obtém a data e hora atual
     data_hora = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
@@ -226,36 +227,33 @@ def trilha():
 
 def funcoes():
     while True:
-        with sr.Microphone() as source:
-            comando = "Eu fui projetada especialmente para te ouvir, entender quais são as suas críticas em relação ao nosso produto e descobrir, com a sua ajuda, como podemos fornecer um produto e atendimento melhor para você. Você é o gestor ou o usuário final?"
-            maquina_fala(comando)
-            comando = input()
+        comando = "Eu fui projetada especialmente para te ouvir, entender quais são as suas críticas em relação ao nosso produto e descobrir, com a sua ajuda, como podemos fornecer um produto e atendimento melhor para você. Você é o gestor ou o usuário final?"
+        maquina_fala(comando)
+        comando = input()
         try:
-            if "gestor" in comando:
-                with sr.Microphone() as source:
-                    comando = "Você gostaria de adicionar perguntas e categorias novas no seu programa de feedback ou visualizar os feedbacks coletados?"
-                    maquina_fala(comando)
-                    comando = input()
+            if "gestor" in comando or "Gestor" in comando:
+                comando = "Você gostaria de adicionar perguntas e categorias novas no seu programa de feedback ou visualizar os feedbacks coletados?"
+                maquina_fala(comando)
+                comando = input()
 
-                    try:
-                        if "visualizar" in comando or "Visualizar" in comando or "ver" in comando or "analisar" in comando:
-                            mostrar_feedbacks()
-                        elif "adicionar" in comando:
-                            definir_categorias_perguntas(arquivo_config)
-                        elif "fim" in comando:
-                            break
-                        else:
-                            erro = "Não entendi o comando. Tente novamente."
-                            maquina_fala(erro)
-                            funcoes()
-                    except sr.UnknownValueError:
-                        unknown_value()
+                try:
+                    if "visualizar" in comando or "Visualizar" in comando or "ver" in comando or "analisar" in comando:
+                        mostrar_feedbacks()
+                    elif "adicionar" in comando or "Adicionar" in comando:
+                        definir_categorias_perguntas(arquivo_config)
+                    elif "fim" in comando:
+                        break
+                    else:
+                        erro = "Não entendi o comando. Tente novamente."
+                        maquina_fala(erro)
+                        funcoes()
+                except sr.UnknownValueError:
+                    unknown_value()
 
-                    except sr.RequestError as e:
-                        request_error()
+                except sr.RequestError as e:
+                    request_error(e)
 
             else:
-                with sr.Microphone() as source:
                     comando = "Você gostaria de dar um novo feedback?"
                     maquina_fala(comando)
                     comando = input()
@@ -273,47 +271,33 @@ def funcoes():
                         unknown_value()
 
                     except sr.RequestError as e:
-                        request_error()
-
-            if "dar" in comando or "novo" in comando:
-                trilha()
-            elif "visualizar" in comando or "Visualizar" in comando or "ver" in comando or "analisar" in comando:
-                mostrar_feedbacks()
-            elif "não" in comando or "Não" in comando or "nenhuma" in comando:
-                negativa = "Tudo bem, espero te ver numa próxima vez e que você tenha uma experiência melhor com o nosso produto."
-                maquina_fala(negativa)
-                principal()
-            else:
-                erro = "Não entendi o comando. Tente novamente."
-                maquina_fala(erro)
-                funcoes()
+                        request_error(e)
         except sr.UnknownValueError:
             unknown_value()
 
         except sr.RequestError as e:
-            request_error()
+            request_error(e)
 
 
 def principal():
     while True:
-        with sr.Microphone() as source:
-            comando = "Olá, eu sou a IA VozDoCliente, uma inteligência artificial desenvolvida especialmente para te ouvir. Vamos começar? "
-            maquina_fala(comando)
-            comando = input()
+        comando = "Olá, eu sou a IA VozDoCliente, uma inteligência artificial desenvolvida especialmente para te ouvir. Vamos começar? "
+        maquina_fala(comando)
+        comando = input()
 
-            try:
-                if "sim" in comando or "começar" in comando or "Sim" in comando:
-                    funcoes()
-                else:
-                    mestre = "Não entendi... Talvez eu não seja a IA que você procure."
-                    maquina_fala(mestre)
-                    principal()
+        try:
+            if "sim" in comando or "começar" in comando or "Sim" in comando:
+                funcoes()
+            else:
+                mestre = "Não entendi... Talvez eu não seja a IA que você procure."
+                maquina_fala(mestre)
+                principal()
 
-            except sr.UnknownValueError:
-                unknown_value()
+        except sr.UnknownValueError:
+            unknown_value()
 
-            except sr.RequestError as e:
-                request_error()
+        except sr.RequestError as e:
+            request_error(e)
 
 
 principal()
