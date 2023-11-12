@@ -35,6 +35,7 @@ Essa ferramenta foi desenvolvida para ajudar a melhorar a usabilidade e qualidad
 
 
 
+     
 
 ## Idéias para o futuro
 - Oferecer a capacidade de coletar feedback por meio de diferentes canais, como aplicativos móveis, formulários online, sites do cliente e etc...
