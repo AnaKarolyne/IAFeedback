@@ -3,6 +3,7 @@
 A IA VozDoCliente é um projeto de inteligência artificial, para funcionar como uma API/IA predefinida que pode ser utilizada como complemento dos softwares dos clientes. O programa permite uma série de funcionalidades, bem como a personalização de perguntas e categorias que serão lidas durante a execução do programa de feedback e a coleta de feedbacks dos usuários finais em arquivo .xlsx para posterior exportação a análise adequada. 
 Essa ferramenta foi desenvolvida para ajudar a melhorar a usabilidade e qualidade de produtos e serviços.
 
+<br><br>
 
 ## Funcionalidades
 
@@ -12,6 +13,7 @@ Essa ferramenta foi desenvolvida para ajudar a melhorar a usabilidade e qualidad
 - Visualização dos feedbacks coletados.
 - Interface de voz para interagir com os usuários.
 
+<br><br>
 
 ## Como Usar
 
@@ -20,6 +22,7 @@ Essa ferramenta foi desenvolvida para ajudar a melhorar a usabilidade e qualidad
 3. Instale as extensões necessárias dentro do terminal.
 4. Execute o programa.
 
+<br><br>
 
 ## Idéias para o futuro
 
@@ -28,19 +31,21 @@ Essa ferramenta foi desenvolvida para ajudar a melhorar a usabilidade e qualidad
 - Implementar um sistema de notificações automáticas para lembrar os colaboradores de fornecerem feedback em intervalos regulares, facilitando a coleta contínua.
 - Desenvolver uma IA de complemento que realize a análise das informações para ajudar as empresas a extrair insights significativos a partir dos feedbacks coletados.
 - Reforçar as medidas de segurança para garantir a privacidade e a proteção dos dados sensíveis dos colaboradores, como por exemplo a adição de um sistema de autenticação.
-
+  
+<br><br>
 
 ## Links
 ### Youtube
 - Feedback com perguntas fixas (3° Entrega - Chellenge): https://youtu.be/n8Bu3IgNMJo
 - Feedback com perguntas dinâmicas (4° Entrega - Chellenge): https://youtu.be/n8Bu3IgNMJo
-
+<br>
 ### Arquivo da Arquitetura 
 - https://github.com/AnaKarolyne/IAFeedback/blob/main/ProjectFeedback/ArquiteturaIAFeedback.pdf
-
+<br>
 ### Figma (Exemplo)
 - [https://youtu.be/n8Bu3IgNMJo](https://www.figma.com/proto/sXI1z7hYD8wOWZABtjsKzA/E-Sa%C3%BAde-Website?type=design&node-id=121-534&t=cLBc51oHm8uUyLl4-0&scaling=min-zoom&page-id=0%3A1)
 
+<br><br>
 
 ## Autores
 | Nome               | RM     |
