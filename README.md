@@ -3,6 +3,7 @@
 A IA VozDoCliente é um projeto de inteligência artificial, para funcionar como uma API/IA predefinida que pode ser utilizada como complemento dos softwares dos clientes. O programa permite uma série de funcionalidades, bem como a personalização de perguntas e categorias que serão lidas durante a execução do programa de feedback e a coleta de feedbacks dos usuários finais em arquivo .xlsx para posterior exportação a análise adequada. 
 Essa ferramenta foi desenvolvida para ajudar a melhorar a usabilidade e qualidade de produtos e serviços.
 
+
 ## Funcionalidades
 
 - Coleta de feedback por texto.
@@ -11,6 +12,7 @@ Essa ferramenta foi desenvolvida para ajudar a melhorar a usabilidade e qualidad
 - Visualização dos feedbacks coletados.
 - Interface de voz para interagir com os usuários.
 
+
 ## Como Usar
 
 1. Instale o PyCharm.
@@ -18,17 +20,22 @@ Essa ferramenta foi desenvolvida para ajudar a melhorar a usabilidade e qualidad
 3. Instale as extensões necessárias dentro do terminal.
 4. Execute o programa.
 
+
 ## Link no Youtube
 
 - Feedback com perguntas fixas (3° Entrega - Chellenge): https://youtu.be/n8Bu3IgNMJo
 - Feedback com perguntas dinâmicas (4° Entrega - Chellenge): https://youtu.be/n8Bu3IgNMJo
-- 
+
+
 ## Link do arquivo da Arquitetura 
+
 - https://github.com/AnaKarolyne/IAFeedback/blob/main/ProjectFeedback/ArquiteturaIAFeedback.pdf
+
 
 ## Link no Figma (Exemplo)
 
 [https://youtu.be/n8Bu3IgNMJo](https://www.figma.com/proto/sXI1z7hYD8wOWZABtjsKzA/E-Sa%C3%BAde-Website?type=design&node-id=121-534&t=cLBc51oHm8uUyLl4-0&scaling=min-zoom&page-id=0%3A1)
+
 
 ## Autores
 | Nome               | RM     |
