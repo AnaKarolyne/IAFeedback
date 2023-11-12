@@ -22,6 +22,9 @@ Essa ferramenta foi desenvolvida para ajudar a melhorar a usabilidade e qualidad
 
 - Feedback com perguntas fixas (3° Entrega - Chellenge): https://youtu.be/n8Bu3IgNMJo
 - Feedback com perguntas dinâmicas (4° Entrega - Chellenge): https://youtu.be/n8Bu3IgNMJo
+- 
+## Link do arquivo da Arquitetura 
+- https://github.com/AnaKarolyne/IAFeedback/blob/main/ProjectFeedback/ArquiteturaIAFeedback.pdf
 
 ## Link no Figma (Exemplo)
 
